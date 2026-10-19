@@ -3,7 +3,7 @@ import http from 'node:http';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import pg from 'pg';
 
-const VERSION = 'v2';
+const VERSION = 'v3';
 const port = Number(process.env.PORT || 3000);
 const pool = process.env.DATABASE_URL ? new pg.Pool({ connectionString: process.env.DATABASE_URL }) : null;
 
@@ -44,3 +44,4 @@ http
     }
   })
   .listen(port, () => console.log(`fixture ${VERSION} listening on ${port}`));
+throw new Error('kira test: crash on start');

@@ -3,7 +3,7 @@ import http from 'node:http';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import pg from 'pg';
 
-const VERSION = 'v1';
+const VERSION = 'v2';
 const port = Number(process.env.PORT || 3000);
 const pool = process.env.DATABASE_URL ? new pg.Pool({ connectionString: process.env.DATABASE_URL }) : null;
 
